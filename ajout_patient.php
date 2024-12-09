@@ -15,13 +15,13 @@
     <form action="./process/process_create_user.php" method="post">
 
         <label for="nom">Nom : </label>
-        <input type="text" name="lastname" id="lastname" required>
+        <input type="text" name="lastName" id="lastName" required>
 
         <label for="prenom">Prenom : </label>
-        <input type="text" name="firstname" id="firstname" required>
+        <input type="text" name="firstName" id="firstName" required>
 
         <label for="naissance">Date de naissance : </label>
-        <input type="date" name="birthdate" id="birthdate"  placeholder="DD/MM/YYYY"  required>
+        <input type="date" name="birthDate" id="birthDate"  placeholder="DD/MM/YYYY"  required>
 
         <label for="phone">Téléphone : </label>
         <input type="tel" name="phone" id="phone" required>

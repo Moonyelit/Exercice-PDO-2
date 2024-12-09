@@ -3,7 +3,7 @@
 require_once '../utils/connect_db.php';
 
 if (
-    empty($_POST['lastname']) || empty($_POST['firstname']) || empty($_POST['birthdate']) ||
+    empty($_POST['lastName']) || empty($_POST['firstName']) || empty($_POST['birthDate']) ||
     empty($_POST['phone']) || empty($_POST['mail'])
 ) {
     echo "Tous les champs ne sont pas remplis !";
@@ -17,15 +17,15 @@ if (
 
 
 
-$sql = "INSERT INTO patients (lastname, firstname, birthdate, phone, mail)
- VALUES (:lastname, :firstname , :birthdate, :phone, :mail)";
+$sql = "INSERT INTO patients (lastName, firstName, birthDate, phone, mail)
+ VALUES (:lastName, :firstName , :birthDate, :phone, :mail)";
 
 try {
     $stmt = $pdo->prepare($sql);
     $users = $stmt->execute([
-        ':lastname' => $_POST["lastname"],
-        ':firstname' => $_POST["firstname"],
-        ':birthdate' => $_POST["birthdate"],
+        ':lastName' => $_POST["lastName"],
+        ':firstName' => $_POST["firstName"],
+        ':birthDate' => $_POST["birthDate"],
         ':phone' => $_POST["phone"],
         ':mail' => $_POST["mail"]
     ]);

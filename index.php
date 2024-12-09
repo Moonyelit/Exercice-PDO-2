@@ -15,7 +15,7 @@
 <a href="./ajout_patient.php" class="btn">Formulaire d'inscription</a>
 
 
- <a href="./db_patients.php" class="btn">Base de données des patients</a>
+ <a href="./liste-patients.php" class="btn">Base de données des patients</a>
 
 
 

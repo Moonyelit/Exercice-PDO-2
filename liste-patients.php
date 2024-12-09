@@ -2,7 +2,8 @@
 <?php
 require_once './utils/connect_db.php';
 
-$sql = "SELECT * FROM `utilisateur`";
+// REFAIRE requete sql avec les select et prendre le code a coté ? J'ai échangé comme une abrutie ?
+$sql = "SELECT * FROM `patients`";
 
 try {
     $stmt = $pdo->query($sql);
@@ -29,16 +30,32 @@ try {
 
 <body>
     <ol>
-        <h1>Liste des utilisateurs :</h1>
-
+        <h1>Liste des patients:</h1>
         <?php
+
         foreach ($users as $user) {
         ?>
-            <li>Nom : <?= $user['nom']  ?> | Prénom : <?= $user['prenom']  ?> </li>
+
+            <li>
+                <p>
+
+                    <br><strong>Nom : </strong><?= $user['lastname']  ?>
+
+                    <br><strong>Prénom : </strong> <?= $user['firstname']  ?>
+
+                    <br><strong>ID : </strong> <?= $user['id']  ?>
+
+
+                </p>
+<h2>Afficher toutes les données relatives a ce patient</h2>
+<a href="./profil-patient.php?id=<?php echo $user['id']?>" class="btn">Voir le Profil</a>
+
+            </li>
+
 
         <?php
         }
-
+var_dump($users)
         ?>
 
     </ol>

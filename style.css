@@ -25,6 +25,14 @@ h1 {
     color: var(--button-color);
 }
 
+h2 {
+    text-align: center;
+    padding: 10px;
+    color: var(--button-color);
+    font-size: 0.9rem;
+}
+
+
 /* Formulaire */
 form {
     max-width: 400px;
