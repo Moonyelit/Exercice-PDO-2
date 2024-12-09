@@ -15,19 +15,19 @@
     <form action="./process/process_create_user.php" method="post">
 
         <label for="nom">Nom : </label>
-        <input type="text" name="lastname" id="lastname">
+        <input type="text" name="lastname" id="lastname" required>
 
         <label for="prenom">Prenom : </label>
-        <input type="text" name="firstname" id="firstname">
+        <input type="text" name="firstname" id="firstname" required>
 
-        <label for="prenom">Date de naissance : </label>
-        <input type="text" name="birthdate" id="birthdate">
+        <label for="naissance">Date de naissance : </label>
+        <input type="date" name="birthdate" id="birthdate"  placeholder="DD/MM/YYYY"  required>
 
-        <label for="prenom">Téléphone : </label>
-        <input type="text" name="phone" id="phone">
+        <label for="phone">Téléphone : </label>
+        <input type="tel" name="phone" id="phone" required>
 
-        <label for="prenom">Mail : </label>
-        <input type="text" name="mail" id="mail">
+        <label for="mail">Mail : </label>
+        <input type="email" name="mail" id="mail" required>
 
 
 
@@ -36,5 +36,6 @@
         <input type="submit" value="Creer utilisateur">
     </form>
 </body>
+
 
 </html>

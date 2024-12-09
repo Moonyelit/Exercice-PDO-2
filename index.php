@@ -11,10 +11,12 @@
 
 <body>
 
-<button> Formulaire d'inscription à l'hôpital</button>
+
+<a href="./ajout_patient.php" class="btn">Formulaire d'inscription</a>
 
 
-<button> Base de données des patients </button>
+ <a href="./db_patients.php" class="btn">Base de données des patients</a>
+
 
 
 

@@ -1,91 +1,105 @@
-/* Global Styles */
+/* style.css */
+
+/* Déclaration des variables de couleur */
+:root {
+    --background-color: #e6f7ff; /* Bleu doux */
+    --text-color: #ffffff; /* Blanc */
+    --button-color: #004080; /* Bleu foncé pour les boutons */
+    --button-hover-color: #0059b3; /* Bleu plus clair au survol */
+    --border-color: #b3d9ff; /* Bleu clair pour les bordures */
+}
+
+/* Style global */
 body {
+    background-color: var(--background-color);
+    color: var(--text-color);
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f8ff; /* AliceBlue */
-    color: #333;
-    line-height: 1.6;
 }
 
-/* Header */
+/* En-têtes */
 h1 {
     text-align: center;
-    margin: 20px 0;
-    color: #1e90ff; /* DodgerBlue */
+    padding: 20px;
+    color: var(--button-color);
 }
 
-/* Buttons */
-button {
-    display: block;
-    margin: 20px auto;
-    padding: 15px 25px;
-    font-size: 18px;
-    color: #fff;
-    background-color: #1e90ff; /* DodgerBlue */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #4682b4; /* SteelBlue */
-}
-
-/* Form Container */
+/* Formulaire */
 form {
     max-width: 400px;
-    margin: 30px auto;
+    margin: 0 auto;
+    background-color: var(--text-color);
     padding: 20px;
-    background: #ffffff; /* White */
-    border: 1px solid #1e90ff; /* DodgerBlue */
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color);
 }
 
-/* Form Labels */
 label {
     display: block;
-    margin-bottom: 8px;
+    margin-top: 10px;
+    color: var(--button-color);
     font-weight: bold;
-    color: #1e90ff; /* DodgerBlue */
 }
 
-/* Form Inputs */
-input[type="text"],
-input[type="email"],
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    box-sizing: border-box;
+}
+
 input[type="submit"] {
     width: 100%;
     padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+    margin-top: 20px;
+    background-color: var(--button-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
     font-size: 16px;
 }
 
-/* Submit Button */
-input[type="submit"] {
-    background-color: #1e90ff; /* DodgerBlue */
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
 input[type="submit"]:hover {
-    background-color: #4682b4; /* SteelBlue */
+    background-color: var(--button-hover-color);
 }
 
-/* Media Queries for Responsive Design */
-@media (max-width: 768px) {
-    form {
-        padding: 15px;
-    }
+/* Liste des utilisateurs */
+ol {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--text-color);
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+}
 
-    button {
-        font-size: 16px;
-        padding: 10px 20px;
-    }
+li {
+    margin: 10px 0;
+    color: var(--button-color);
+}
+
+/* Boutons */
+a.btn {
+    display: block;
+    text-align: center;
+    max-width: 200px;
+    margin: 20px auto;
+    padding: 10px;
+    text-decoration: none;
+    background-color: var(--button-color);
+    color: var(--text-color);
+    font-weight: bold;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    font-size: 16px;
+}
+
+a.btn:hover {
+    background-color: var(--button-hover-color);
 }
