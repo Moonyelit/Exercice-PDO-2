@@ -1,0 +1,91 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff; /* AliceBlue */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: #1e90ff; /* DodgerBlue */
+}
+
+/* Buttons */
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 15px 25px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #1e90ff; /* DodgerBlue */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #4682b4; /* SteelBlue */
+}
+
+/* Form Container */
+form {
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #ffffff; /* White */
+    border: 1px solid #1e90ff; /* DodgerBlue */
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Labels */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #1e90ff; /* DodgerBlue */
+}
+
+/* Form Inputs */
+input[type="text"],
+input[type="email"],
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* Submit Button */
+input[type="submit"] {
+    background-color: #1e90ff; /* DodgerBlue */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #4682b4; /* SteelBlue */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    form {
+        padding: 15px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
