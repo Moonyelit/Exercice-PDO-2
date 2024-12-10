@@ -2,7 +2,6 @@
 <?php
 require_once './utils/connect_db.php';
 
-// REFAIRE requete sql avec les select et prendre le code a coté ? J'ai échangé comme une abrutie ?
 $sql = "SELECT * FROM `patients`";
 
 try {
@@ -13,7 +12,8 @@ try {
     echo "Erreur lors de la requete : " . $error->getMessage();
 }
 
-
+?>
+;
 ?>
 
 
@@ -34,28 +34,33 @@ try {
         <?php
 
         foreach ($users as $user) {
+
+
+            $lastName = $user['lastname'];
+            $firstName = $user['firstname'];
+            $id = $user['id'];
+
         ?>
 
             <li>
                 <p>
 
-                    <br><strong>Nom : </strong><?= $user['lastname']  ?>
+                    <br><strong>Nom : </strong><?= $lastName  ?>
 
-                    <br><strong>Prénom : </strong> <?= $user['firstname']  ?>
+                    <br><strong>Prénom : </strong> <?= $firstName ?>
 
-                    <br><strong>ID : </strong> <?= $user['id']  ?>
-
+                    <br><strong>ID : </strong> <?= $id  ?>
 
                 </p>
-<h2>Afficher toutes les données relatives a ce patient</h2>
-<a href="./profil-patient.php?id=<?php echo $user['id']?>" class="btn">Voir le Profil</a>
+                <h2>Afficher toutes les données relatives a ce patient</h2>
+                <a href="./profil-patient.php?id=<?php echo $user['id'] ?>" class="btn">Voir le Profil</a>
 
             </li>
 
 
         <?php
         }
-var_dump($users)
+        var_dump($users)
         ?>
 
     </ol>

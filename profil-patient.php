@@ -2,10 +2,14 @@
 <?php
 require_once './utils/connect_db.php';
 
-$sql = "SELECT * FROM patients WHERE id = :id";
+$id = $_GET['id'];
+// echo ($id) ; 
+// return;
+
+$sql = "SELECT * FROM patients WHERE id LIKE {$id} ";
 try {
     $stmt = $pdo->query($sql);
-    $users = $stmt->fetchAll(PDO::FETCH_ASSOC); // ou fetch si vous savez que vous n'allez avoir qu'un seul résultat
+    $users = $stmt->fetch(PDO::FETCH_ASSOC); // ou fetch si vous savez que vous n'allez avoir qu'un seul résultat
 
 } catch (PDOException $error) {
     echo "Erreur lors de la requete : " . $error->getMessage();
@@ -29,32 +33,27 @@ try {
 <body>
     <ol>
         <h1>Liste des patients:</h1>
-        <?php
-
-        foreach ($users as $user) {
-        ?>
-
+      
             <li>
                 <p>
 
 
-                    <br><strong>Nom : </strong><?= $user['lastname']  ?>
+                    <br><strong>Nom : </strong><?= $users['lastname']  ?>
 
-                    <br><strong>Prénom : </strong> <?= $user['firstname']  ?>
+                    <br><strong>Prénom : </strong> <?= $users['firstname']  ?>
 
-                    <br><strong>Date de naissance : </strong><?= $user['birthdate']  ?>
+                    <br><strong>Date de naissance : </strong><?= $users['birthdate']  ?>
 
-                    <br><strong>Téléphone : </strong><?= $user['phone']  ?>
+                    <br><strong>Téléphone : </strong><?= $users['phone']  ?>
 
-                    <br<strong>Mail : </strong><?= $user['mail']  ?>
+                    <br<strong>Mail : </strong><?= $users['mail']  ?>
                 </p>
             </li>
 
            
 
         <?php
-        }
-var_dump($users);
+
         ?>
 
     </ol>
