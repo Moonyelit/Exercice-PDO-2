@@ -60,7 +60,7 @@ try {
 
         <?php
         }
-        var_dump($users)
+    
         ?>
 
     </ol>
