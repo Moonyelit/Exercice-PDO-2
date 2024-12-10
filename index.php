@@ -14,10 +14,12 @@
 
 <a href="./ajout_patient.php" class="btn">Formulaire d'inscription</a>
 
-
- <a href="./liste-patients.php" class="btn">Base de données des patients</a>
+ <a href="./liste-patients.php" class="btn">Liste des patients</a>
 
  <a href="./ajout-rendezvous.php" class="btn">Prise de rendez-vous</a>
+
+ <a href="./liste-rendez-vous.php" class="btn">Liste des rendez-vous</a>
+
  
 
 
