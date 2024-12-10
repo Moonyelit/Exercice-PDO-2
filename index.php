@@ -17,7 +17,8 @@
 
  <a href="./liste-patients.php" class="btn">Base de données des patients</a>
 
-
+ <a href="./ajout-rendezvous.php" class="btn">Prise de rendez-vous</a>
+ 
 
 
     </form>

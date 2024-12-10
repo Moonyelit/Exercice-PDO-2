@@ -42,7 +42,7 @@ try {
         <label for="birthDate">Date de naissance :</label>
         <input type="date" name="birthDate" id="birthDate" value="<?= htmlspecialchars($user['birthdate']) ?>" required>
 
-        <label for="phone">Téléphone :</label>
+        <label for="phone">Motif de consultation :</label>
         <input type="tel" name="phone" id="phone" value="<?= htmlspecialchars($user['phone']) ?>" required>
 
         <label for="mail">Email :</label>
@@ -50,7 +50,10 @@ try {
 
         <button type="submit">Mettre à jour</button>
     </form>
-    <a href="./liste-patients.php">Retour à la liste</a>
+    <a href="./liste-patients.php" class="btn">Retour à la liste</a>
+
+
 </body>
 
 </html>
+ 
