@@ -44,6 +44,10 @@ form {
     border: 1px solid var(--border-color);
 }
 
+form p {
+    color: var(--button-color);
+}
+
 label {
     display: block;
     margin-top: 10px;
@@ -90,6 +94,11 @@ ol {
 li {
     margin: 10px 0;
     color: solid var(--button-color);
+}
+
+ol p {
+    margin: 10px 0;
+    color: var(--button-color);
 }
 
 .case{
