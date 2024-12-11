@@ -1,4 +1,3 @@
-// index.php
 <?php
 require_once './utils/connect_db.php';
 
@@ -6,17 +5,12 @@ $sql = "SELECT * FROM `patients`";
 
 try {
     $stmt = $pdo->query($sql);
-    $users = $stmt->fetchAll(PDO::FETCH_ASSOC); // ou fetch si vous savez que vous n'allez avoir qu'un seul résultat
+    $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 } catch (PDOException $error) {
-    echo "Erreur lors de la requete : " . $error->getMessage();
+    echo "Erreur lors de la requête : " . $error->getMessage();
 }
-
 ?>
-;
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,48 +18,25 @@ try {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Base de données patients</title>
-    <link rel="stylesheet" href="style.css">
-
-</head>
+    <link rel="stylesheet" href="style.css?v=<?= time(); ?>">
+    </head>
 
 <body>
     <ol>
-        <h1>Liste des patients:</h1>
-        <?php
-
-        foreach ($users as $user) {
-
-
-            $lastName = $user['lastname'];
-            $firstName = $user['firstname'];
-            $id = $user['id'];
-
-        ?>
-
-            <li>
+        <h1>Liste des patients :</h1>
+        <?php foreach ($users as $user): ?>
+            <li class="case">
                 <p>
-
-                    <br><strong>Nom : </strong><?= $lastName  ?>
-
-                    <br><strong>Prénom : </strong> <?= $firstName ?>
-
-                    <br><strong>ID : </strong> <?= $id  ?>
-
+                    <br><strong>Nom :</strong> <?= htmlspecialchars($user['lastname']); ?>
+                    <br><strong>Prénom :</strong> <?= htmlspecialchars($user['firstname']); ?>
+                    <br><strong>ID :</strong> <?= htmlspecialchars($user['id']); ?>
                 </p>
-                <h2>Afficher toutes les données relatives a ce patient</h2>
-                <a href="./profil-patient.php?id=<?php echo $user['id'] ?>" class="btn">Voir le Profil</a>
-
+                <h2>Afficher toutes les données relatives à ce patient</h2>
+                <a href="./profil-patient.php?id=<?= htmlspecialchars($user['id']); ?>" class="btn">Voir le Profil</a>
             </li>
-
-
-        <?php
-        }
-    
-        ?>
-
+        <?php endforeach; ?>
     </ol>
-
+    <a href="./index.php" class="btn">Revenir à l'accueil</a>
 </body>
 
 </html>
-?>

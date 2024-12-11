@@ -89,7 +89,15 @@ ol {
 
 li {
     margin: 10px 0;
+    color: solid var(--button-color);
+}
+
+.case{
+    border: 1px solid var(--button-color);
+    background-color: var(--background-color);
+    border-radius: 2rem;
     color: var(--button-color);
+    padding: 0 2rem ;
 }
 
 /* Boutons */

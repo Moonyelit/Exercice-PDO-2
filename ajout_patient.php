@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulaire ajout patient</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=<?= time(); ?>">
 
 </head>
 
@@ -35,6 +35,9 @@
 
         <input type="submit" value="Creer utilisateur">
     </form>
+
+    <a href="./index.php" class="btn">Revenir à l'accueil</a>
+
 </body>
 
 

@@ -25,7 +25,7 @@ try {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ajout d'un rdv</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=<?= time(); ?>">
 
 </head>
 
@@ -45,7 +45,7 @@ try {
 
 
         <label for="dateHour">Date du rendez-vous :</label>
-        <input type="datetime-local" name="dateHour" id="dateHour" required>
+        <input type="datetime-local" name="dateHour" id="dateHour" required min="<?= date('Y-m-d\TH:i'); ?>">
 
 
         <label for="appointment">Motif de consultation :</label>
@@ -59,6 +59,9 @@ try {
 
         <input type="submit" value="Prendre rendez-vous">
     </form>
+
+    <a href="./index.php" class="btn">Revenir à l'accueil</a>
+
 </body>
 
 </html>
